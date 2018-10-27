@@ -4,14 +4,14 @@ DATA::DATA()
 {
     data = "\0";
     alphabet.append("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.,:;+-=_<>/?!'\"|\\~`#$%^&*(){}[]\ \t\n");
-    Validation();
+  //  Validation();
 }
 
 DATA::DATA ( QString data){
 
     this->data.append(data);
     alphabet.append("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.,:;+-=_<>/?!'\"|\\~`#$%^&*(){}[]\ \t\n");
-    Validation();
+  //  Validation();
 }
 
 DATA::DATA ( QString data, int id){
@@ -31,7 +31,7 @@ DATA::DATA ( QString data, int id){
         alphabet.append("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯабвгґдеєжзиіїйклмнопрстуфхцчшщьюя1234567890.,:;<>+-=_/?!'\"|\\~`#$%^&*(){}[]\ \t\n");
 
     }
-    Validation();
+  //  Validation();
 
 }
 

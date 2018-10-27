@@ -27,7 +27,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="caesar_page">
        <property name="geometry">
@@ -35,7 +35,7 @@
          <x>0</x>
          <y>0</y>
          <width>200</width>
-         <height>504</height>
+         <height>473</height>
         </rect>
        </property>
        <attribute name="label">
@@ -80,7 +80,7 @@
          <x>0</x>
          <y>0</y>
          <width>200</width>
-         <height>504</height>
+         <height>473</height>
         </rect>
        </property>
        <attribute name="label">
@@ -304,7 +304,7 @@
              <x>0</x>
              <y>0</y>
              <width>182</width>
-             <height>393</height>
+             <height>362</height>
             </rect>
            </property>
            <attribute name="label">
@@ -339,7 +339,7 @@
          <x>0</x>
          <y>0</y>
          <width>200</width>
-         <height>504</height>
+         <height>473</height>
         </rect>
        </property>
        <attribute name="label">
@@ -365,6 +365,23 @@
            </size>
           </property>
          </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="book_page">
+       <attribute name="label">
+        <string>BOOK CIPHER</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="1" column="0">
+         <widget class="QTextEdit" name="poem_textEdit"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>A piese of pietry:</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

@@ -4,6 +4,7 @@
 #include "caesar.h"
 #include "trithemius.h"
 #include "vernam.h"
+#include "book.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -111,6 +112,12 @@ void MainWindow::GoCryption(int ind){
           VERNAM Object(str,language);
           ui->main_textEdit->clear();
           ui->main_textEdit->append(Object.Cryption(ind, ui->seed_spinBox->value()));
+    }
+    if(ui->book_page->isVisible()){
+          QString str = ui->main_textEdit->toPlainText() ;
+          BOOK Object(str);
+          ui->main_textEdit->clear();
+          ui->main_textEdit->append(Object.Cryption(ind, ui->poem_textEdit->toPlainText()));
     }
 
 }

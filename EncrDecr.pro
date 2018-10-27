@@ -17,13 +17,15 @@ SOURCES += main.cpp\
     data.cpp \
     caesar.cpp \
     trithemius.cpp \
-    vernam.cpp
+    vernam.cpp \
+    book.cpp
 
 HEADERS  += mainwindow.h \
     data.h \
     caesar.h \
     trithemius.h \
-    vernam.h
+    vernam.h \
+    book.h
 
 FORMS    += mainwindow.ui
 
