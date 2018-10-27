@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1079</width>
+    <height>685</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1">
+     <widget class="QTextEdit" name="main_textEdit"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QToolBox" name="toolBox">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="caesar_page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>200</width>
+         <height>504</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>CAESAR</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>                   Key</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QSpinBox" name="caesar_spinBox">
+          <property name="maximum">
+           <number>1000000</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="trithemius_page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>200</width>
+         <height>504</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>TRITHEMIUS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QToolBox" name="toolBox_2">
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="trit_linear_page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>141</width>
+             <height>107</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>linear equation</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>      key = Ax + B</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="maximumSize">
+               <size>
+                <width>15</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>B:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QSpinBox" name="trit_linear_b_spinBox">
+              <property name="minimum">
+               <number>-1000000</number>
+              </property>
+              <property name="maximum">
+               <number>1000000</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>15</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>A:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QSpinBox" name="trit_linear_a_spinBox">
+              <property name="minimum">
+               <number>-1000000</number>
+              </property>
+              <property name="maximum">
+               <number>1000000</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="trit_non_linear_equation_page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>156</width>
+             <height>140</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>non linear equation</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_7">
+              <property name="maximumSize">
+               <size>
+                <width>15</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>B:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="maximumSize">
+               <size>
+                <width>15</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>C:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QSpinBox" name="trit_non_linear_c_spinBox">
+              <property name="minimum">
+               <number>-1000000</number>
+              </property>
+              <property name="maximum">
+               <number>1000000</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="maximumSize">
+               <size>
+                <width>15</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>A:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QSpinBox" name="trit_non_linear_a_spinBox">
+              <property name="minimum">
+               <number>-1000000</number>
+              </property>
+              <property name="maximum">
+               <number>1000000</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>key = Ax^2+Bx+C</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QSpinBox" name="trit_non_linear_b_spinBox">
+              <property name="minimum">
+               <number>-1000000</number>
+              </property>
+              <property name="maximum">
+               <number>1000000</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="slogan_page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>182</width>
+             <height>393</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>slogan</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <widget class="QTextEdit" name="trit_slogan_textEdit"/>
+            </item>
+            <item row="1" column="0">
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="vernam_page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>200</width>
+         <height>504</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string> One Time Pad</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QSpinBox" name="seed_spinBox">
+          <property name="maximum">
+           <number>1000000</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>       CHOOSE METHOD</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="maximumSize">
+       <size>
+        <width>130</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Language</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QRadioButton" name="En_radioButton">
+         <property name="text">
+          <string>English</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Ru_radioButton">
+         <property name="text">
+          <string>Russion</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Uk_radioButton">
+         <property name="text">
+          <string>Ukrainion</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="minimumSize">
+          <size>
+           <width>110</width>
+           <height>159</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>110</width>
+           <height>159</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">image: url(:/img/img/Caesar.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1079</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionAdd_to_Current"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionPrint"/>
+   </widget>
+   <widget class="QMenu" name="menuEction">
+    <property name="title">
+     <string>Ection</string>
+    </property>
+    <addaction name="actionEncrypt"/>
+    <addaction name="actionDecrypt"/>
+   </widget>
+   <widget class="QMenu" name="menuInfo">
+    <property name="title">
+     <string>Info</string>
+    </property>
+    <addaction name="actionInfo"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEction"/>
+   <addaction name="menuInfo"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionAdd_to_Current"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionPrint"/>
+   <addaction name="actionEncrypt"/>
+   <addaction name="actionDecrypt"/>
+   <addaction name="actionInfo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/icons8-документ-50.png</normaloff>:/img/img/icons8-документ-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionAdd_to_Current">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/icons8-добавить-файл-50.png</normaloff>:/img/img/icons8-добавить-файл-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add to Current</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/icons8-сохранить-как-50.png</normaloff>:/img/img/icons8-сохранить-как-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/icons8-печать-50.png</normaloff>:/img/img/icons8-печать-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionEncrypt">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/icons8-data-encryption-50.png</normaloff>:/img/img/icons8-data-encryption-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Encrypt</string>
+   </property>
+  </action>
+  <action name="actionDecrypt">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/icons8-data-encryption-filled-50.png</normaloff>:/img/img/icons8-data-encryption-filled-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Decrypt</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/img/img/icons8-информация-50.png</normaloff>:/img/img/icons8-информация-50.png</iconset>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
