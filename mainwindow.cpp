@@ -5,6 +5,7 @@
 #include "trithemius.h"
 #include "vernam.h"
 #include "book.h"
+#include "des.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -118,6 +119,37 @@ void MainWindow::GoCryption(int ind){
           BOOK Object(str);
           ui->main_textEdit->clear();
           ui->main_textEdit->append(Object.Cryption(ind, ui->poem_textEdit->toPlainText()));
+    }
+    if(ui->des_page->isVisible()){
+
+        QString str = ui->main_textEdit->toPlainText();
+          DES Object(str);
+          ui->main_textEdit->clear();
+          if(ind == 1){
+              QString temp;
+              temp = Object.Cryption(ind, ui->des_textEdit->toPlainText().toUtf8().toBase64());
+
+              QString str1;
+                  ushort val = 0;
+                  for (int i = 0; i < temp.length(); i++)
+                  {
+
+                      val = temp[i].toLatin1();
+                      str1 = str1 + QString("0x") + QString("%1 ").arg(val, 0, 8).rightJustified(3, '0').right(3);
+                  }
+                  //return str1.trimmed();
+
+
+//               ui->main_textEdit->append(str1.trimmed());
+
+               ui->main_textEdit->append(temp);
+          }
+          else{
+
+            ui->main_textEdit->append(Object.Cryption(ind, ui->des_textEdit->toPlainText().toUtf8().toBase64()));
+
+          }
+
     }
 
 }

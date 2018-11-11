@@ -10,7 +10,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = EncrDecr
 TEMPLATE = app
-
+LIBS += -L/usr/lib/lcryptopp.a
+LIBS += -lcryptopp
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -18,14 +19,16 @@ SOURCES += main.cpp\
     caesar.cpp \
     trithemius.cpp \
     vernam.cpp \
-    book.cpp
+    book.cpp \
+    des.cpp
 
 HEADERS  += mainwindow.h \
     data.h \
     caesar.h \
     trithemius.h \
     vernam.h \
-    book.h
+    book.h \
+    des.h
 
 FORMS    += mainwindow.ui
 

@@ -60,45 +60,6 @@ QString BOOK::Cryption(int ind, QString key){
                        outgoing_data.push_back(",");
                    }
         }
-
-
-
-        /*RAND_LETTTER rand_letter [data.length()];
-        int raw_counter = 0;
-        int column_counter = 0;
-        int rand_counter;
-        for (int i = 0; i < data.length(); i++){
-                rand_counter = 0;
-                raw_counter = 0;
-                for(int j = 0; j < key.length(); j++){
-                    if(key[j].toLatin1() != '\n'){
-                        if(data[i] == key[j]){
-                            rand_letter[rand_counter].column = column_counter;
-                            rand_letter[rand_counter].raw = raw_counter;
-                            rand_counter++;
-                        }
-                        column_counter++;
-                    }
-                   else {
-                        raw_counter++;
-                        column_counter = 0;
-                   }
-                }
-                   if(rand_counter != 0){
-                       int temp = rand() % rand_counter;
-                       outgoing_data.push_back(QString::number((rand_letter[temp].raw)));
-                       outgoing_data.push_back("/");
-                       outgoing_data.push_back(QString::number(rand_letter[temp].column));
-                       outgoing_data.push_back(",");
-                   }
-                   else{
-                       outgoing_data.push_back("0");
-                       outgoing_data.push_back("/");
-                       outgoing_data.push_back("0");
-                       outgoing_data.push_back(",");
-                   }
-                }
-                */
     }
     else{
         int a,b;
