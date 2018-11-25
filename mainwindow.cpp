@@ -6,6 +6,9 @@
 #include "vernam.h"
 #include "book.h"
 #include "des.h"
+#include "bag.h"
+#include <QMessageBox>
+#include <QDialog>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -56,6 +59,23 @@ void MainWindow::on_actionDecrypt_triggered()
    int ind = 0;
    GoCryption(ind);
 }
+
+
+void MainWindow::on_bag_create_key_pushButton_clicked()
+{
+
+    KeyDialog asyn_private_key_dialog;
+    if(asyn_private_key_dialog.exec()){
+      //  ui->main_textEdit->append(asyn_private_key_dialog.return_private_key());
+        ui->bag_public_key_textEdit->clear();
+        ui->bag_public_key_textEdit->append(Object.Create_Key_Pair(asyn_private_key_dialog.return_private_key(),
+                                                                   asyn_private_key_dialog.return_q(),
+                                                                   asyn_private_key_dialog.return_r(),
+                                                                   asyn_private_key_dialog.return_mult_rev_r()));
+
+    }
+}
+
 
 void MainWindow::GoCryption(int ind){
 
@@ -121,35 +141,43 @@ void MainWindow::GoCryption(int ind){
           ui->main_textEdit->append(Object.Cryption(ind, ui->poem_textEdit->toPlainText()));
     }
     if(ui->des_page->isVisible()){
+        QString key = ui->des_textEdit->toPlainText();
+        int check = key.length()*sizeof(QChar);
+        qDebug() << " Key length: " << check;
 
-        QString str = ui->main_textEdit->toPlainText();
-          DES Object(str);
-          ui->main_textEdit->clear();
-          if(ind == 1){
-              QString temp;
-              temp = Object.Cryption(ind, ui->des_textEdit->toPlainText().toUtf8().toBase64());
-
-              QString str1;
-                  ushort val = 0;
-                  for (int i = 0; i < temp.length(); i++)
-                  {
-
-                      val = temp[i].toLatin1();
-                      str1 = str1 + QString("0x") + QString("%1 ").arg(val, 0, 8).rightJustified(3, '0').right(3);
-                  }
-                  //return str1.trimmed();
+        if( check > 16){
+           QMessageBox::critical(0,"Critical", "Key is too long!");
 
 
-//               ui->main_textEdit->append(str1.trimmed());
 
-               ui->main_textEdit->append(temp);
-          }
-          else{
+          }else{
 
+            QString str = ui->main_textEdit->toPlainText();
+            DES Object(str);
+            ui->main_textEdit->clear();
             ui->main_textEdit->append(Object.Cryption(ind, ui->des_textEdit->toPlainText().toUtf8().toBase64()));
 
-          }
+        }
 
+    }
+
+    if(ui->bag_page->isVisible()){
+          QString str = ui->main_textEdit->toPlainText() ;
+          if(bag_object_was_create == true){
+              ui->main_textEdit->clear();
+              ui->main_textEdit->append(Object.Cryption(ind, ui->bag_public_key_textEdit->toPlainText(), str));
+          }
+          else
+          if(ind == 1)
+          {
+          ui->main_textEdit->clear();
+          ui->main_textEdit->append(Object.Cryption(ind, ui->bag_public_key_textEdit->toPlainText(), str));
+          }
+          else
+          {
+              ui->main_textEdit->clear();
+              ui->main_textEdit->append(Object.Cryption(ind, ui->bag_public_key_textEdit->toPlainText(), str));
+          }
     }
 
 }

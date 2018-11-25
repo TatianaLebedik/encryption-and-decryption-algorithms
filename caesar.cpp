@@ -2,6 +2,8 @@
 
 CAESAR::CAESAR() :   DATA(){}
 
+CAESAR::CAESAR(QString inp_data) :     DATA(inp_data){}
+
 CAESAR::CAESAR(QString inp_data, int inp_language) :     DATA(inp_data, inp_language){}
 
 QString CAESAR::Cryption(int key, bool ind){

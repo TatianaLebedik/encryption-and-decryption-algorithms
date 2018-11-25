@@ -20,7 +20,9 @@ SOURCES += main.cpp\
     trithemius.cpp \
     vernam.cpp \
     book.cpp \
-    des.cpp
+    des.cpp \
+    bag.cpp \
+    keydialog.cpp
 
 HEADERS  += mainwindow.h \
     data.h \
@@ -28,9 +30,13 @@ HEADERS  += mainwindow.h \
     trithemius.h \
     vernam.h \
     book.h \
-    des.h
+    des.h \
+    bag.h \
+    keydialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    asynkeydialog.ui \
+    keydialog.ui
 
 RESOURCES += \
     resource.qrc

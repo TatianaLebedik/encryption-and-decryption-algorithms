@@ -1,7 +1,7 @@
 #ifndef DATA_H
 #define DATA_H
 
-#include "mainwindow.h"
+//#include "mainwindow.h"
 
 #include<QString>
 #include<QMessageBox>
@@ -21,8 +21,8 @@ protected:
     void Validation();
 public:
     DATA();
-    DATA (QString data);
-    DATA( QString data,  int id);
+    DATA(QString data);
+    DATA(QString data,  int id);
     QString LoadFromFile();
     bool SaveToFile(QString str);
     bool Print();
