@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     book.cpp \
     des.cpp \
     bag.cpp \
-    keydialog.cpp
+    keydialog.cpp \
+    rsa_class.cpp
 
 HEADERS  += mainwindow.h \
     data.h \
@@ -32,11 +33,13 @@ HEADERS  += mainwindow.h \
     book.h \
     des.h \
     bag.h \
-    keydialog.h
+    keydialog.h \
+    rsa_class.h
 
 FORMS    += mainwindow.ui \
     asynkeydialog.ui \
-    keydialog.ui
+    keydialog.ui \
+    rsakeydialog.ui
 
 RESOURCES += \
     resource.qrc

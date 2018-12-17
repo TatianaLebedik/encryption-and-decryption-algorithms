@@ -108,7 +108,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="caesar_page">
        <property name="geometry">
@@ -116,7 +116,7 @@
          <x>0</x>
          <y>0</y>
          <width>300</width>
-         <height>411</height>
+         <height>380</height>
         </rect>
        </property>
        <attribute name="label">
@@ -161,7 +161,7 @@
          <x>0</x>
          <y>0</y>
          <width>300</width>
-         <height>411</height>
+         <height>380</height>
         </rect>
        </property>
        <attribute name="label">
@@ -385,7 +385,7 @@
              <x>0</x>
              <y>0</y>
              <width>282</width>
-             <height>300</height>
+             <height>269</height>
             </rect>
            </property>
            <attribute name="label">
@@ -420,7 +420,7 @@
          <x>0</x>
          <y>0</y>
          <width>300</width>
-         <height>411</height>
+         <height>380</height>
         </rect>
        </property>
        <attribute name="label">
@@ -455,7 +455,7 @@
          <x>0</x>
          <y>0</y>
          <width>300</width>
-         <height>411</height>
+         <height>380</height>
         </rect>
        </property>
        <attribute name="label">
@@ -480,7 +480,7 @@
          <x>0</x>
          <y>0</y>
          <width>300</width>
-         <height>411</height>
+         <height>380</height>
         </rect>
        </property>
        <attribute name="label">
@@ -513,6 +513,14 @@
        </layout>
       </widget>
       <widget class="QWidget" name="bag_page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>300</width>
+         <height>380</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>BAG</string>
        </attribute>
@@ -546,6 +554,40 @@
            </size>
           </property>
          </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="rsa_page">
+       <attribute name="label">
+        <string>RSA</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>Private Key:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QTextEdit" name="rsa_private_key_textEdit"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Public Key:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QTextEdit" name="rsa_public_key_textEdit"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QPushButton" name="rsa_create_key_pair_pushButton">
+          <property name="text">
+           <string>Create Key Pair</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -606,7 +648,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/img/img/icons8-документ-50.png</normaloff>:/img/img/icons8-документ-50.png</iconset>
    </property>
    <property name="text">
@@ -615,7 +657,7 @@
   </action>
   <action name="actionAdd_to_Current">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/img/img/icons8-добавить-файл-50.png</normaloff>:/img/img/icons8-добавить-файл-50.png</iconset>
    </property>
    <property name="text">
@@ -624,7 +666,7 @@
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/img/img/icons8-сохранить-как-50.png</normaloff>:/img/img/icons8-сохранить-как-50.png</iconset>
    </property>
    <property name="text">
@@ -633,7 +675,7 @@
   </action>
   <action name="actionPrint">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/img/img/icons8-печать-50.png</normaloff>:/img/img/icons8-печать-50.png</iconset>
    </property>
    <property name="text">
@@ -642,7 +684,7 @@
   </action>
   <action name="actionEncrypt">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/img/img/icons8-data-encryption-50.png</normaloff>:/img/img/icons8-data-encryption-50.png</iconset>
    </property>
    <property name="text">
@@ -651,7 +693,7 @@
   </action>
   <action name="actionDecrypt">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/img/img/icons8-data-encryption-filled-50.png</normaloff>:/img/img/icons8-data-encryption-filled-50.png</iconset>
    </property>
    <property name="text">
@@ -660,7 +702,7 @@
   </action>
   <action name="actionInfo">
    <property name="icon">
-    <iconset resource="resource.qrc">
+    <iconset>
      <normaloff>:/img/img/icons8-информация-50.png</normaloff>:/img/img/icons8-информация-50.png</iconset>
    </property>
    <property name="text">
@@ -669,8 +711,6 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

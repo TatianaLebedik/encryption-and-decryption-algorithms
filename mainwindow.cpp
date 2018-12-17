@@ -6,7 +6,7 @@
 #include "vernam.h"
 #include "book.h"
 #include "des.h"
-#include "bag.h"
+#include <vector>
 #include <QMessageBox>
 #include <QDialog>
 
@@ -73,12 +73,12 @@ void MainWindow::on_bag_create_key_pushButton_clicked()
                                                                    asyn_private_key_dialog.return_r(),
                                                                    asyn_private_key_dialog.return_mult_rev_r()));
 
+
     }
 }
 
 
 void MainWindow::GoCryption(int ind){
-
 
     int language;
 
@@ -179,5 +179,31 @@ void MainWindow::GoCryption(int ind){
               ui->main_textEdit->append(Object.Cryption(ind, ui->bag_public_key_textEdit->toPlainText(), str));
           }
     }
+
+    if(ui->rsa_page->isVisible()){
+
+
+         QString str = ui->main_textEdit->toPlainText();
+
+         if(ind == 1){
+             ui->main_textEdit->clear();
+            ui->main_textEdit->append(RsaObject->Cryption(ind, ui->rsa_public_key_textEdit->toPlainText(), str));
+         }
+         else{
+             ui->main_textEdit->clear();
+            ui->main_textEdit->append(RsaObject->Cryption(ind, ui->rsa_private_key_textEdit->toPlainText(), str));
+         }
+        }
+}
+
+void MainWindow::on_rsa_create_key_pair_pushButton_clicked()
+{
+
+    ui->rsa_public_key_textEdit->clear();
+    ui->rsa_private_key_textEdit->clear();
+   // QString *publicKeyForUi, *privateKeyForUi;
+    std::vector<QString> keys(RsaObject->CreateKeys(/*publicKeyForUi, privateKeyForUi*/));
+    ui->rsa_public_key_textEdit->append(keys.at(0));
+    ui->rsa_private_key_textEdit->append(keys.at(1));
 
 }
