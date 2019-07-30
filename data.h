@@ -13,18 +13,24 @@
 #include<QTextDocument>
 #include<QPrintDialog>
 
-class DATA
-{
+class DATA {
 protected:
     QString data;
     QString alphabet;
+
     void Validation();
+
 public:
     DATA();
+
     DATA(QString data);
-    DATA(QString data,  int id);
+
+    DATA(QString data, int id);
+
     QString LoadFromFile();
+
     bool SaveToFile(QString str);
+
     bool Print();
 };
 

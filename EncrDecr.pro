@@ -38,8 +38,10 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui \
     asynkeydialog.ui \
-    keydialog.ui \
-    rsakeydialog.ui
+    keydialog.ui
 
 RESOURCES += \
     resource.qrc
+
+DISTFILES += \
+    .gitignore

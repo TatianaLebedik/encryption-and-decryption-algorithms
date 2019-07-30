@@ -558,6 +558,14 @@
        </layout>
       </widget>
       <widget class="QWidget" name="rsa_page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>300</width>
+         <height>380</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>RSA</string>
        </attribute>
@@ -570,7 +578,11 @@
          </widget>
         </item>
         <item row="5" column="0">
-         <widget class="QTextEdit" name="rsa_private_key_textEdit"/>
+         <widget class="QTextEdit" name="rsa_private_key_textEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_15">
@@ -580,7 +592,11 @@
          </widget>
         </item>
         <item row="3" column="0">
-         <widget class="QTextEdit" name="rsa_public_key_textEdit"/>
+         <widget class="QTextEdit" name="rsa_public_key_textEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
         <item row="6" column="0">
          <widget class="QPushButton" name="rsa_create_key_pair_pushButton">
@@ -648,7 +664,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/img/img/icons8-документ-50.png</normaloff>:/img/img/icons8-документ-50.png</iconset>
    </property>
    <property name="text">
@@ -657,7 +673,7 @@
   </action>
   <action name="actionAdd_to_Current">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/img/img/icons8-добавить-файл-50.png</normaloff>:/img/img/icons8-добавить-файл-50.png</iconset>
    </property>
    <property name="text">
@@ -666,7 +682,7 @@
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/img/img/icons8-сохранить-как-50.png</normaloff>:/img/img/icons8-сохранить-как-50.png</iconset>
    </property>
    <property name="text">
@@ -675,7 +691,7 @@
   </action>
   <action name="actionPrint">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/img/img/icons8-печать-50.png</normaloff>:/img/img/icons8-печать-50.png</iconset>
    </property>
    <property name="text">
@@ -684,7 +700,7 @@
   </action>
   <action name="actionEncrypt">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/img/img/icons8-data-encryption-50.png</normaloff>:/img/img/icons8-data-encryption-50.png</iconset>
    </property>
    <property name="text">
@@ -693,7 +709,7 @@
   </action>
   <action name="actionDecrypt">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/img/img/icons8-data-encryption-filled-50.png</normaloff>:/img/img/icons8-data-encryption-filled-50.png</iconset>
    </property>
    <property name="text">
@@ -702,7 +718,7 @@
   </action>
   <action name="actionInfo">
    <property name="icon">
-    <iconset>
+    <iconset resource="resource.qrc">
      <normaloff>:/img/img/icons8-информация-50.png</normaloff>:/img/img/icons8-информация-50.png</iconset>
    </property>
    <property name="text">
@@ -711,6 +727,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
